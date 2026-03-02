@@ -23,6 +23,7 @@ Therefore, the model is tuned with `class_weight='balanced'`.
 
 ### Performance on Unseen Test Data:
 **Recall for No-Shows:** **80%**
+
 **Business Value:** The model identifies 8 out of 10 patients who will fail to show up, allowing for intervention.
 
 ![Feature Importance](notebooks/feature_importance.png)
