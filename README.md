@@ -16,10 +16,12 @@ Through exploratory data analysis, logistical factors stood out in predicting at
 ![Wait Time compared to No-Show Risk](notebooks/wait_time_no_show.png)
 
 ## ML Model
-Implemented a **Random Forest Classifier** to predict the likelihood of a patient no-show.
+Implemented a **Random Forest Classifier** to predict the likelihood of a patient no-show. A decision tree was chosen for its high interpretability.
 
 It was deemed more important to prioritize **Recall** than **Precision**, since sending a false alarm is less costly (sending a SMS-reminder to someone who was going to show up), than a "missed alarm" (not predicting a no-show).
 Therefore, the model is tuned with `class_weight='balanced'`.
+
+Hyperparameter tuning was not performed as the baseline model performance was sufficient for the proof-of-concept. To maintain training integrity on the data available, a validation split was deemed unnescessary for this iteration.
 
 ### Performance on Unseen Test Data:
 **Recall for No-Shows:** **80%**
